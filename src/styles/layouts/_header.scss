@@ -1,0 +1,63 @@
+.header {
+  @include XYCenter;
+  padding: 20px 0;
+
+  .title {
+    h1 {
+      position: relative;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 35px;
+        left: 25px;
+        width: 100%;
+        height: 20px;
+        transform: skew(-12deg) translateY(-10px) translateX(-10px);
+        transition: 0.2s;
+        background: $color-2;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.header {
+  h1 {
+    font-size: 3.3rem;
+    text-shadow: 2px 3px 0px $color-1;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  nav {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 1.3rem;
+
+    ul {
+      display: flex;
+
+      a {
+        text-decoration: none;
+        color: $white;
+        border-radius: 10px;
+        width: 102px;
+        text-align: center;
+        margin-right: 5px;
+
+        &:visited {
+          text-decoration: none;
+        }
+        &:hover {
+        }
+      }
+      a.nav-active {
+        &:hover {
+        }
+      }
+    }
+  }
+}

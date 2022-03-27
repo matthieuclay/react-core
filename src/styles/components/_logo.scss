@@ -1,0 +1,36 @@
+.logo {
+  @include verticalCenter;
+  margin: 5px auto;
+  width: 200px;
+  border-radius: 20px;
+  padding: 5px 0;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.307);
+  background: url(../../assets/img/main.jpg) center/cover;
+
+  img {
+    height: 40px;
+  }
+  h3 {
+    margin-left: 10px;
+    color: $color-1;
+  }
+}
+
+.logo {
+  position: absolute;
+  font-family: $font-2;
+  font-size: 1.2rem;
+  user-select: none;
+
+  &:after {
+    content: "";
+    height: 24px;
+    width: 24px;
+    border: 1px $color-2 solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: -12px;
+    z-index: -1;
+  }
+}
